@@ -6,9 +6,7 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint",
-		"predeploy": "npm run build",
-		"deploy": "gh-pages -d out"
+		"lint": "next lint"
 	},
 	"dependencies": {
 		"@emotion/react": "^11.10.6",
@@ -31,7 +29,6 @@
 		"embla-carousel-react": "^7.1.0",
 		"eslint": "8.37.0",
 		"eslint-config-next": "13.2.4",
-		"gh-pages": "^5.0.0",
 		"next": "13.2.4",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",

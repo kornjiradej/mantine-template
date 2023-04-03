@@ -12,6 +12,7 @@ import {
 	useMantineColorScheme,
 	Switch,
 	useMantineTheme,
+	Drawer,
 } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 import { IconChevronDown } from '@tabler/icons-react'
@@ -68,13 +69,13 @@ const useStyles = createStyles((theme) => ({
 export const HeaderMenu = ({ links }: HeaderSearchProps) => {
 	const theme = useMantineTheme()
 	const { colorScheme, toggleColorScheme } = useMantineColorScheme()
-	const [opened, { toggle }] = useDisclosure(false)
+	const [opened, { toggle, close }] = useDisclosure(false)
 	const { classes } = useStyles()
 
 	const items = links.map((link) => {
 		const menuItems = link.links?.map((item) => (
 			<Menu.Item key={item.link}>
-				<Link to={item.link} smooth duration={500}>
+				<Link to={item.link} smooth duration={500} onClick={close}>
 					{item.label}
 				</Link>
 			</Menu.Item>
@@ -92,7 +93,10 @@ export const HeaderMenu = ({ links }: HeaderSearchProps) => {
 						<a
 							href={link.link}
 							className={classes.link}
-							onClick={(event) => event.preventDefault()}
+							onClick={(event) => {
+								event.preventDefault()
+								close()
+							}}
 						>
 							<Center>
 								<span className={classes.linkLabel}>{link.label}</span>
@@ -106,7 +110,14 @@ export const HeaderMenu = ({ links }: HeaderSearchProps) => {
 		}
 
 		return (
-			<Link key={link.label} to={link.link} smooth duration={500} className={classes.link}>
+			<Link
+				key={link.label}
+				to={link.link}
+				smooth
+				duration={500}
+				className={classes.link}
+				onClick={close}
+			>
 				{link.label}
 			</Link>
 		)
@@ -146,6 +157,15 @@ export const HeaderMenu = ({ links }: HeaderSearchProps) => {
 						className={classes.burger}
 						size='sm'
 					/>
+					<Drawer
+						opened={opened}
+						onClose={close}
+						title='Menu'
+						overlayProps={{ opacity: 0.5, blur: 4 }}
+						position='right'
+					>
+						{items}
+					</Drawer>
 				</div>
 			</Container>
 		</Header>
