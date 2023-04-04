@@ -1,3 +1,4 @@
+import { baseImageUrlS3 } from '@/config'
 import {
 	Badge,
 	Button,
@@ -33,16 +34,17 @@ export const SectionFour = () => {
 					<Grid.Col xs={12} sm={4} md={4} lg={4}>
 						<Card shadow='sm' p='lg' style={{ height: '100%' }}>
 							<Card.Section>
-								<Image src={'/images/lime-welcome.png'} alt={'sample1'} />
+								<Image
+									src={`${baseImageUrlS3}/lime-welcome.png`}
+									alt={'sample1'}
+								/>
 							</Card.Section>
 							<Group
 								position='apart'
 								style={{ marginBottom: 5, marginTop: theme.spacing.sm }}
 							>
 								<Text weight={500}>History of Dennis Farina</Text>
-								<Badge variant='light'>
-									Cool badge
-								</Badge>
+								<Badge variant='light'>Cool badge</Badge>
 							</Group>
 							<Text size='sm'>
 								Discover the career of Dennis Farina and his roles in movies!
@@ -55,16 +57,17 @@ export const SectionFour = () => {
 					<Grid.Col xs={12} sm={4} md={4} lg={4}>
 						<Card shadow='sm' p='lg' style={{ height: '100%' }}>
 							<Card.Section>
-								<Image src={'/images/lime-canoeing.png'} alt={'sample1'} />
+								<Image
+									src={`${baseImageUrlS3}/lime-canoeing.png`}
+									alt={'sample1'}
+								/>
 							</Card.Section>
 							<Group
 								position='apart'
 								style={{ marginBottom: 5, marginTop: theme.spacing.sm }}
 							>
 								<Text weight={500}>Career of Dennis Farina</Text>
-								<Badge variant='light'>
-									Cool badge 2
-								</Badge>
+								<Badge variant='light'>Cool badge 2</Badge>
 							</Group>
 							<Text size='sm'>
 								Dennis Farina had a really great career with many opportunities!
@@ -78,16 +81,17 @@ export const SectionFour = () => {
 					<Grid.Col xs={12} sm={4} md={4} lg={4}>
 						<Card shadow='sm' p='lg' style={{ height: '100%' }}>
 							<Card.Section>
-								<Image src={'/images/lime-message-sent.png'} alt={'sample1'} />
+								<Image
+									src={`${baseImageUrlS3}/lime-message-sent.png`}
+									alt={'sample1'}
+								/>
 							</Card.Section>
 							<Group
 								position='apart'
 								style={{ marginBottom: 5, marginTop: theme.spacing.sm }}
 							>
 								<Text weight={500}>Major roles of Dennis Farina</Text>
-								<Badge variant='light'>
-									Cool badge 3
-								</Badge>
+								<Badge variant='light'>Cool badge 3</Badge>
 							</Group>
 							<Text size='sm'>
 								Discover the major roles of Dennis Farina and something else!

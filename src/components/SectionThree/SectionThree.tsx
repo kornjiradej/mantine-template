@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/jsx-no-undef */
+import { baseImageUrlS3 } from '@/config'
 import { Button, Container, Grid, Text, Title, Image } from '@mantine/core'
 
 export const SectionThree = () => {
@@ -21,7 +22,7 @@ export const SectionThree = () => {
 					</Grid.Col>
 					<Grid.Col xs={6} sm={4} md={4} lg={4}>
 						<Image
-							src={'/images/lime-surfing.png'}
+							src={`${baseImageUrlS3}/lime-surfing.png`}
 							alt={'sample1'}
 							style={{ width: '100%' }}
 						/>
