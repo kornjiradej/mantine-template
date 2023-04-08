@@ -1,2 +1,2 @@
 export const baseImageUrlS3 =
-	'https://mantine-nextjs-template.s3.ap-southeast-2.amazonaws.com'
+	'https://pub-52a6df97f88141bd85333aa2eae98503.r2.dev'
